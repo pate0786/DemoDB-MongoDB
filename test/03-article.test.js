@@ -8,8 +8,13 @@ describe('Article Model', () => {
 
   beforeAll(async () => {
     const dbResponse = await mongoose.connect(dbpath, {
+      
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      //useCreateIndex: true,
+      //useNewUrlParser: true,
+      //useUnifiedTopology: true,
+      //useFindAndModify: false
     });
 
     if (dbResponse.catch)
